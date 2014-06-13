@@ -1,2 +1,2 @@
-ishMail
-=======
+ishMail Email Editor
+======
