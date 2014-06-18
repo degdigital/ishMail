@@ -14,7 +14,12 @@
     $('#file-manager').find('a').on('click', function(e) {
         e.preventDefault();
         $('#sg-viewport').attr('src', $(this).attr('href'));
+        $('#file-manager').find('.active').removeClass('active');
+        $(this).parent().addClass('active');
     });
-
+    $('#file-editor').find('button').on('click', function(e) {
+        e.preventDefault();
+        $('#file-editor').removeClass('active');
+    });
   });
 })(jQuery);

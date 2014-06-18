@@ -23,7 +23,7 @@
                     "cursor": ""
                 });                
             }).on('click', function() {
-
+                $('#file-editor').toggleClass('active');
             });
 
         });

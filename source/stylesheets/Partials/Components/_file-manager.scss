@@ -1,4 +1,5 @@
 .file-manager {
+	z-index: 1;
 	ul {
 		@include unset-list;
 		li {
