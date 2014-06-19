@@ -22,7 +22,7 @@
                     <li>
                         <div class="sg-current-size">
                             <form id="sg-form">
-                                <label>Size:</label>
+                                <label class="icon-ruler">Screen Size:</label>
                                 <input type="text" class="sg-input sg-size-px" value="320">px / 
                                 <input type="text" class="sg-input sg-size-em" value="20">em
                             </form>
@@ -35,14 +35,14 @@
             </section>
             <section class="menu">
                 <ul>
-                    <li><a href="#" id="file-manager-trigger">Emails</a>
-                    <li><a href="#">Preview and Test</a>
-                    <li><a href="#">Save and Exit</a>
+                    <li><a href="#" class="icon-envelope" id="file-manager-trigger">Emails</a>
+                    <li><a href="#" class="icon-eye">Preview &amp; Test</a>
+                    <li><a href="#" class="icon-publish">Publish All</a>
                 </ul>
             </section>
         </header>
 
-        <section id="preview"> 
+        <section id="preview-panel"> 
             <!-- Iframe -->
 <div id="sg-vp-wrap">
     <div id="sg-cover"></div>
@@ -57,12 +57,24 @@
         </section>
 
         <section class="panel file-manager active" id="file-manager">
-            <h1>Emails</h1>
-            <ul>
-                <li class="active"><a href="email.html">Welcome 1</a>
-                <li><a href="email2.html">Welcome 2</a>
-            </ul>
-        </section>
+    <h1>Emails</h1>
+    <ul>
+        <li class="active">
+        	<a class="file-name" href="email.html">Welcome 1</a>
+        	<div class="options-bar">
+        		<a class="icon-eye" href=""></a>
+        		<a class="icon-publish" href=""></a>
+        		<a class="properties-trigger icon-cog" href=""></a>
+        	</div>
+        <li>
+        	<a class="file-name" href="email2.html">Welcome 2</a>
+        	<div class="options-bar">
+        		<a class="icon-eye" href=""></a>
+        		<a class="icon-publish" href=""></a>
+        		<a class="properties-trigger icon-cog" href=""></a>
+        	</div>
+    </ul>
+</section>
 
         <section class="panel file-editor" id="file-editor">
             <h1>Content Editor</h1>
