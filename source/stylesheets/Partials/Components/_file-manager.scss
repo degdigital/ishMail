@@ -3,18 +3,36 @@
 	ul {
 		@include unset-list;
 		li {
-			a {
+			position: relative;
+			.file-name {
 				font-size: .9em;
 				display: block;
 				padding: 1em 1.6em;
 				color: $color-mid;
 				text-decoration: none;
 			}
-			&.active a,
-			&:hover a {
+			.options-bar {
+				display: none;
+				position: absolute;
+				top: .65em;
+				right: 1.25em;
+				a {
+					font-size: .65em;
+					display: inline-block;
+					padding: .25em .5em;
+					color: lighten($color-dark, 30%);
+					&:hover { color: $color-dark; }
+					&:before { margin-right: 0; margin-top: 0; }
+				}
+			}
+			&.active,
+			&:hover {
 				background: lighten($color-light, 8%);
-				color: $color-dark;
-				border-right: 6px solid $color-deg;
+				border-right: 6px solid $color-brand;
+				.file-name { color: $color-dark; }
+			}
+			&.active {
+				.options-bar { display: block; }
 			}
 		}
 	}
