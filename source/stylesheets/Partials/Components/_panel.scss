@@ -1,0 +1,22 @@
+.panel {
+	background: $color-white;
+	position: fixed;
+	top: 2em;
+	bottom: 0;
+	right: -21.81em;
+	width: 21.81em;
+	border-left: 1px solid $color-mid;
+	-webkit-transition: -webkit-transform .25s ease-in-out;
+		      -moz-transition: -moz-transform .25s ease-in-out;
+			       		transition: transform .25s ease-in-out;
+	&.active {
+		-webkit-transform: translate3D(-21.81em,0,0);
+			   -moz-transform: translate3D(-21.81em,0,0);
+			        transform: translate3D(-21.81em,0,0);
+	}
+	h1 { 
+		margin: 1.25em 1em .5em; 
+		padding-bottom: .25em;
+		border-bottom: 1px solid $color-light;
+	}
+}

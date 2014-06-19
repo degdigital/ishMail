@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title><%= data.page.title || "ishMail" %></title>
+        <%= stylesheet_link_tag "ish", "all" %>
+        <%= javascript_include_tag  "plugins/modernizr","init" %>
+    </head>
+    <body class="<%= page_classes %>">
+
+        <header class="header">
+            <section class="sg-controls" id="sg-controls">
+                <ul>
+                    <li>
+                        <div class="sg-current-size">
+                            <form id="sg-form">
+                                <label>Size:</label>
+                                <input type="text" class="sg-input sg-size-px" value="320">px / 
+                                <input type="text" class="sg-input sg-size-em" value="20">em
+                            </form>
+                        </div>
+                    <li><a href="#" id="sg-size-s">S</a>
+                    <li><a href="#" id="sg-size-m">M</a>
+                    <li><a href="#" id="sg-size-l">L</a>
+                    <li><a href="#" id="sg-size-full">Full</a>
+                </ul>
+            </section>
+            <section class="menu">
+                <ul>
+                    <li><a href="#" id="file-manager-trigger">Emails</a>
+                    <li><a href="#">Preview and Test</a>
+                    <li><a href="#">Save and Exit</a>
+                </ul>
+            </section>
+        </header>
+
+        <section id="preview"> 
+            <%= yield %>
+        </section>
+
+        <section class="panel file-manager active" id="file-manager">
+            <h1>Emails</h1>
+            <ul>
+                <li class="active"><a href="email.html">Welcome 1</a>
+                <li><a href="email2.html">Welcome 2</a>
+            </ul>
+        </section>
+
+        <section class="panel file-editor" id="file-editor">
+            <h1>Content Editor</h1>
+            <form action="">
+                <fieldset>
+                    <%= partial "partials/editor-types/headline" %>
+
+                    <div class="save-editor">
+                        <button>Save &amp; Close</button>
+                        <p class="notice">We'll autosave every 20 seconds</p>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <%= javascript_include_tag  "all" %>
+    </body>
+</html>
