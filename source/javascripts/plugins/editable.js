@@ -14,7 +14,7 @@
 
             element.on('mouseover', function() {
                 $(this).css({
-                    "box-shadow": "0 0 10px rgba(255,0,0,.4)",
+                    "box-shadow": "0 0 1px #1982c4",
                     "cursor": "pointer"
                 });
             }).on('mouseout', function() {
